@@ -1,0 +1,191 @@
+﻿ <!DOCTYPE html>
+ <html lang="pt -br">
+ <head >
+ <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8">
+ <title> K19 - Animações </title >
+ 
+ <style>
+
+ 
+     
+ #div1
+ {
+position:relative;
+width : 90% ;
+height : 470px ;
+border : 2px solid black ;
+border-radius:10px;
+margin : 50px ;
+
+
+         background-repeat:no-repeat;
+         background-position:center center;
+         background-size:cover;
+
+         color:white;
+}
+ 
+ .primeiro_filho
+ {
+     margin:0;
+     position:absolute;
+     width:40%;
+     height:50%;
+     float:left;
+     text-align:center;
+     bottom:0;
+
+     background-color:transparent;
+ }
+
+  .primeiro_segundo
+ {
+      margin:0;
+      position:absolute;
+
+
+     width:56%;
+     height:70%;     
+     float:right;
+
+
+     bottom:0;
+     right:0;
+     text-align:center;
+    
+ }
+
+     figure {
+                 
+         bottom:30px;        
+         height:inherit;
+     }
+
+     img
+      {
+         border-radius:10px;
+         margin:0px 2px 2px 2px;
+         float:right;
+         width:32%;
+         height:90%;
+
+         
+         box-shadow:-2px -2px gray;
+     }
+
+     p { margin:10px;}
+
+     .add1{background-image:url("informatica.jpg"); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+     .add2{background-image:url("angola.jpg"); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+     .add3{background-image:url("images (2).jpg"); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+     .add4{background:linear-gradient(#00ff90,#b200ff); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+ </style>
+ 
+ </head>
+ 
+ 
+ <body>
+ <div id="div1">
+     <div class="primeiro_filho">
+         <h1>What is my name?</h1>
+         <h2>Edmilson Gabriel Vunge</h2>
+         <p>it is one more projecto for my portifolio</p>
+     </div>
+
+     <div class="primeiro_segundo">
+         <figure>
+
+             <img src="informatica.jpg" alt="primeira-foto" onclick="add1()"/>
+             <img src="angola.jpg" alt="segunda-foto" onclick="add2()"/>
+             <img src="images (2).jpg" alt="terceira-foto" onclick="add3()"/>
+
+         </figure>    
+
+             <p>Escolhe um <strong>Imagem</strong> para o fundo</p></p>
+
+         
+         
+     </div>
+ </div>
+
+     <script>
+
+
+         let x = document.getElementById("div1");
+
+         x.classList.add("add4");
+
+         function add1()
+         {
+             if (x.classList.contains("add4")) {
+                 x.classList.remove("add4");
+             }
+
+             if (x.classList.contains("add3")) {
+                 x.classList.remove("add3");
+             }
+
+             if (x.classList.contains("add1")) {
+                 x.classList.remove("add1");
+             }
+
+             if (x.classList.contains("add2")) {
+                 x.classList.remove("add2");
+             }
+
+             x.classList.add("add1");
+
+             x.style.color = "white";
+         }
+
+         function add2() {
+             if (x.classList.contains("add4")) {
+                 x.classList.remove("add4");
+             }
+
+             if (x.classList.contains("add3")) {
+                 x.classList.remove("add3");
+             }
+
+             if (x.classList.contains("add1")) {
+                 x.classList.remove("add1");
+             }
+
+             if (x.classList.contains("add2")) {
+                 x.classList.remove("add2");
+             }
+
+             x.classList.add("add2");
+
+             x.style.color = "yellow";
+         }
+
+         function add3() {
+             if (x.classList.contains("add4")) {
+                 x.classList.remove("add4");
+             }
+
+             if (x.classList.contains("add3")) {
+                 x.classList.remove("add3");
+             }
+
+             if (x.classList.contains("add1")) {
+                 x.classList.remove("add1");
+             }
+
+             if (x.classList.contains("add2")) {
+                 x.classList.remove("add2");
+             }
+
+             x.classList.add("add3");
+
+             x.style.color = "black";
+         }
+
+       
+     </script>
+ </body>
+ </html>
